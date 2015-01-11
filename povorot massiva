@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+#include <conio.h>
+const int N=10;
+int  A[N][N],  B[N][N] ;
+void Ro() {
+    int i,j,c=1,k=1;
+    for (i=0; i<N; i++) {
+        for (j=0; j<N; j++){
+            A[i][j]=k;
+            k++;
+            B[i][j]=A[N-j-1][i];
+            printf("%d ",B[i][j]);
+        }
+        printf("\n");  
+    }
+}
+int main(int argc, char* argv[])
+{
+    int m[N][N],t=1,v[N][N];
+    for (int z=0; z<N; z++){
+        for (int q=0; q<N; q++){
+            m[z][q]=t; t++;
+        }
+    }
+    for (int r=0; r<N; r++) {
+        for (int h=0; h<N; h++) {
+            v[r][h]=m[10-h-1][r];
+            printf("%d ",v[r][h]);
+        }
+        printf("\n");
+    }
+    Ro();
+    getch();
+    return 0;
+}
